@@ -1,47 +1,4 @@
-/*
-Explicit rules: 
-- When  a players deck exceeds 21 points they loose ('bust')
-- The game always only has 2 people, a dealer and a player
-- At the start of a round, both dealer and player get dealt 2 cards
-- The player can see their 2 cards and one of the cards of the dealer
-- Card values: 
-  - number cards have their face value
-  - jack, queen and king are worth 10 points
-  - ace > is worth 11 points if the current value of the hand doesn't exceed 21
-  otherwise it's worth 1 point. 
-  - If there a second ace is drawn, one of the aces takes the value of 1 if the current
-  hand exceeds the value of 21
-- Players turn: Each round the player chooses to 'hit' or 'stay' With a hit
-the player will be dealt another card.
-- Dealers turn: The dealer hits must hit until their total is at least 17
-  - If the dealer busts, the player wins
-- Cards are compared when both the dealer and the player stay
 
-Implicit rules: 
-- At each turn, the player see
-
-Questions: 
-- Does the player only see the dealers card at the beginning of a round? 
-- Is the card the player sees determined at random? 
-- Can the dealer continue to hit after their cards reached 17? 
-
-Data structure: 
-  - Deck: nested array
-
-Algorithm: 
-
-1. Initialize deck
-2. Deal cards to player and dealer
-3. Player turn: hit or stay
-   - repeat until bust or stay
-4. If player bust, dealer wins.
-5. Dealer turn: hit or stay
-   - repeat until total >= 17
-6. If dealer busts, player wins.
-7. Compare cards and declare winner.
-
-
-*/
 const readline = require("readline-sync");
 
 let player;
